@@ -1,0 +1,17 @@
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\LabWork1\LW1\LabWork1\LabWork1\bin\Debug\net6.0-windows\LabWork1.exe
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\LabWork1\LW1\LabWork1\LabWork1\bin\Debug\net6.0-windows\LabWork1.deps.json
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\LabWork1\LW1\LabWork1\LabWork1\bin\Debug\net6.0-windows\LabWork1.runtimeconfig.json
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\LabWork1\LW1\LabWork1\LabWork1\bin\Debug\net6.0-windows\LabWork1.dll
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\LabWork1\LW1\LabWork1\LabWork1\bin\Debug\net6.0-windows\LabWork1.pdb
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\LabWork1\LW1\LabWork1\LabWork1\obj\Debug\net6.0-windows\LabWork1.csproj.AssemblyReference.cache
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\LabWork1\LW1\LabWork1\LabWork1\obj\Debug\net6.0-windows\LabWork1.Form1.resources
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\LabWork1\LW1\LabWork1\LabWork1\obj\Debug\net6.0-windows\LabWork1.csproj.GenerateResource.cache
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\LabWork1\LW1\LabWork1\LabWork1\obj\Debug\net6.0-windows\LabWork1.GeneratedMSBuildEditorConfig.editorconfig
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\LabWork1\LW1\LabWork1\LabWork1\obj\Debug\net6.0-windows\LabWork1.AssemblyInfoInputs.cache
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\LabWork1\LW1\LabWork1\LabWork1\obj\Debug\net6.0-windows\LabWork1.AssemblyInfo.cs
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\LabWork1\LW1\LabWork1\LabWork1\obj\Debug\net6.0-windows\LabWork1.csproj.CoreCompileInputs.cache
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\LabWork1\LW1\LabWork1\LabWork1\obj\Debug\net6.0-windows\LabWork1.dll
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\LabWork1\LW1\LabWork1\LabWork1\obj\Debug\net6.0-windows\refint\LabWork1.dll
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\LabWork1\LW1\LabWork1\LabWork1\obj\Debug\net6.0-windows\LabWork1.pdb
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\LabWork1\LW1\LabWork1\LabWork1\obj\Debug\net6.0-windows\LabWork1.genruntimeconfig.cache
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\LabWork1\LW1\LabWork1\LabWork1\obj\Debug\net6.0-windows\ref\LabWork1.dll
