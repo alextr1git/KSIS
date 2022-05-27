@@ -16,13 +16,12 @@ namespace Chat
             return Name;
         }
 
-        public string WhatIsThis(string message, IPEndPoint adress)
+        public string WhatIsThis(string message)
         {
             if (message[0] == '0' && message.Length >= 2)
             {
                 var name = message.Substring(1);
-                //AddUser(name, adress);
-                return name + " entered chat";
+                return name + "has just joined us";
             }
             return "";
         }

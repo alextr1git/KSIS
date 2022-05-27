@@ -16,7 +16,7 @@ namespace Chat
         public User(string login, IPEndPoint endPoint)
         {
             IP = endPoint.Address;
-            tcpPort = 8005;
+            tcpPort = 7501;
             this.Name = login;
         }
         public User(TcpClient tcpClient, int port)

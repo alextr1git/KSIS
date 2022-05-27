@@ -9,11 +9,12 @@ namespace Chat
 {
     public partial class Form1 : Form
     {
-        private string _username;
-        private IPAddress Ip;
+        private string _username; //CH
+        private string _userIP; //CH
+        private IPAddress Ip; //CH
         private bool _alive = true;
-        private const int UDPPort = 8004;
-        private const int TCPPort = 8005;
+        private const int UDPPort = 7500;
+        private const int TCPPort = 7501;
         private readonly IPAddress broadcastAddress = IPAddress.Broadcast;
 
         private static Task receiveThreadUDP;
@@ -37,20 +38,27 @@ namespace Chat
                 else
                 {
                     _username = loginForm.UserName;
-                    string  MassageUsername = _username.Substring(0, _username.IndexOf('/'));
-                    string MessageIp = _username.Substring(_username.IndexOf('/') + 1);
-                    _username = MassageUsername;
-                    if (IPAddress.TryParse(MessageIp, out var address))
+                    _userIP = loginForm.UserIP; 
+
+                    string  MessageUsername = _username;
+                    string MessageIp = _userIP;
+                    if (IPAddress.TryParse(MessageIp, out var address)) //try to put address->messageIp
                     {
                         Ip = address;
                     }
+                    /*else
+                    {
+                        MessageBox.Show("IP error occured");
+                        return;
+                        
+                    }*/
                     _alive = true;
                     SendMessageUDP("0" + _username);
                     
                     receiveThreadUDP = new Task(ReceiveMessageUDP);
                     receiveThreadUDP.Start();
                     
-                    txtChat.Text = $"{DateTime.Now.ToShortTimeString()} : You [{Ip}] enterd chat\n" + txtChat.Text;
+                    txtChat.Text = $"{DateTime.Now.ToShortTimeString()} : {_username} [{Ip}] (you)  has just entered the chat\n" + txtChat.Text;
                     receiveThreadTCP = new Task(ReceiveTCP);
                     receiveThreadTCP.Start();
                     Show();
@@ -86,7 +94,7 @@ namespace Chat
                 byte[] data = receiver.Receive(ref remoteIp);
                 string message = Encoding.UTF8.GetString(data);
 
-                string toPrint = _setChat.WhatIsThis(message, remoteIp);
+                string toPrint = _setChat.WhatIsThis(message); // check wherther it's first,last or ordinary message
 
                 User newUser = new User(message.Substring(1), remoteIp);
                 newUser.EstablishConnection();
@@ -115,7 +123,7 @@ namespace Chat
                 }
                 catch
                 {
-                    //MessageBox.Show($"Could not send message {user.Name}.");
+                    MessageBox.Show($"Could not send message to {user.Name}.");
                 }
             }
 
@@ -123,8 +131,7 @@ namespace Chat
             {
                 this.Invoke(new MethodInvoker(() =>
                 {
-                    txtChat.Text = $"{DateTime.Now.ToShortTimeString()} :  You [{Ip}]: {tcpMessage.Substring(1)}\n" +
-                                   txtChat.Text;
+                    txtChat.Text = $"{DateTime.Now.ToShortTimeString()} :  You [{Ip}]: {tcpMessage.Substring(1)}\n" + txtChat.Text;
                 }));
             }
         }
@@ -141,7 +148,6 @@ namespace Chat
 
                 Task.Factory.StartNew(() => ListenClient(newUser));
             }
-            // ReSharper disable once FunctionNeverReturns
         }
 
         private void ListenClient(User client)
@@ -161,7 +167,7 @@ namespace Chat
                         this.Invoke(new MethodInvoker(() =>
                         {
                             txtChat.Text =
-                                $"{DateTime.Now.ToShortTimeString()} :  {client.Name} [{client.IP}] left chat\n" +
+                                $"{DateTime.Now.ToShortTimeString()} :  {client.Name} [{client.IP}] has left the chat\n" +
                                 txtChat.Text;
                         }));
                         _setChat.UserList.Remove(client);
@@ -184,19 +190,22 @@ namespace Chat
             SendMessageToAllClients("2" + txtToSend.Text);
             txtToSend.Text = "";
         }
+
+        public void AccurateSender() {
+            if (txtToSend.Text == "")
+            {
+                MessageBox.Show("Try to write something first");
+            }
+            else
+            {
+                SendMessage();
+            }
+        }
         private void txtToSend_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                if (txtToSend.Text == "")
-                {
-                    MessageBox.Show("Empty message");
-                }
-                else
-                {
-                    SendMessage();
-                }
-
+                AccurateSender();
                 e.Handled = true;
                 e.SuppressKeyPress = true;
             }
@@ -217,14 +226,7 @@ namespace Chat
 
         private void btnSend_Click(object sender, EventArgs e)
         {
-            if (txtToSend.Text == "")
-            {
-                MessageBox.Show("Empty message");
-            }
-            else
-            {
-                SendMessage();
-            }
+            AccurateSender();
         }
         
     }
