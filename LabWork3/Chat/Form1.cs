@@ -46,12 +46,7 @@ namespace Chat
                     {
                         Ip = address;
                     }
-                    /*else
-                    {
-                        MessageBox.Show("IP error occured");
-                        return;
-                        
-                    }*/
+
                     _alive = true;
                     SendMessageUDP("0" + _username);
                     
@@ -67,7 +62,7 @@ namespace Chat
                 
         }
         
-        private void SendMessageUDP(string message)
+        private void SendMessageUDP(string message) //Send broadcast message
         {
             UdpClient sender = new UdpClient(new IPEndPoint(Ip, UDPPort));
             try
@@ -96,7 +91,7 @@ namespace Chat
 
                 string toPrint = _setChat.WhatIsThis(message); // check wherther it's first,last or ordinary message
 
-                User newUser = new User(message.Substring(1), remoteIp);
+                User newUser = new User(message.Substring(1), remoteIp); // get clear login and create user
                 newUser.EstablishConnection();
                 _setChat.UserList.Add(newUser);
                 newUser.SendMessage("0" + _username);
@@ -130,8 +125,8 @@ namespace Chat
             if (tcpMessage[0] == '2')
             {
                 this.Invoke(new MethodInvoker(() =>
-                {
-                    txtChat.Text = $"{DateTime.Now.ToShortTimeString()} :  You [{Ip}]: {tcpMessage.Substring(1)}\n" + txtChat.Text;
+                {          
+                    txtChat.Text = $"{DateTime.Now.ToShortTimeString()} : {_username} [{Ip}] (you):  {tcpMessage.Substring(1)}\n" + txtChat.Text;
                 }));
             }
         }
@@ -157,13 +152,13 @@ namespace Chat
                 string tcpMessage = client.ReceiveMessage();
                 switch (tcpMessage[0])
                 {
-                    case '0':
+                    case '0': //fist message
                     {
                         client.Name = tcpMessage.Substring(1);
                         _setChat.UserList.Add(client);
                         break;
                     }
-                    case '1':
+                    case '1': // last message
                         this.Invoke(new MethodInvoker(() =>
                         {
                             txtChat.Text =
@@ -173,7 +168,7 @@ namespace Chat
                         _setChat.UserList.Remove(client);
                         return;
 
-                    case '2':
+                    case '2': // ordinary message
                         this.Invoke(new MethodInvoker(() =>
                         {
                             txtChat.Text =
@@ -191,7 +186,7 @@ namespace Chat
             txtToSend.Text = "";
         }
 
-        public void AccurateSender() {
+        public void SafeSender() {
             if (txtToSend.Text == "")
             {
                 MessageBox.Show("Try to write something first");
@@ -205,7 +200,7 @@ namespace Chat
         {
             if (e.KeyCode == Keys.Enter)
             {
-                AccurateSender();
+                SafeSender();
                 e.Handled = true;
                 e.SuppressKeyPress = true;
             }
@@ -226,7 +221,7 @@ namespace Chat
 
         private void btnSend_Click(object sender, EventArgs e)
         {
-            AccurateSender();
+            SafeSender();
         }
         
     }
