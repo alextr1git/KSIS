@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace Chat;
 
-public partial class LoginForm : Form
+public partial class Authorization : Form
 {
     string _userinfo = "";
     string _userIP = "";
@@ -18,9 +18,10 @@ public partial class LoginForm : Form
     {
         get { return _userIP; }
     }
-    public LoginForm()
+    public Authorization()
     {
         InitializeComponent();
+        tbIP.Text = "127.0.0.1";
     }
 
     private void BntEnter_Click(object sender, EventArgs e)
@@ -33,7 +34,7 @@ public partial class LoginForm : Form
         foreach (char symbol in _userIP) {
             if (symbol == '.')
                 counter++;
-            if (((int)symbol <= 0) || ((int)symbol >= 9)){
+            if ((((int)symbol < 48) || ((int)symbol > 57)) && ((int) symbol != 46)){
                 flag = false;
                 break;
             }

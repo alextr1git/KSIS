@@ -2,7 +2,7 @@
 
 namespace Chat;
 
-partial class LoginForm
+partial class Authorization
 {
     /// <summary>
     /// Required designer variable.
@@ -42,15 +42,15 @@ partial class LoginForm
             // txtUsername
             // 
             this.txtUsername.Location = new System.Drawing.Point(13, 76);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(342, 26);
             this.txtUsername.TabIndex = 0;
             // 
             // BntEnter
             // 
-            this.BntEnter.Location = new System.Drawing.Point(409, 76);
-            this.BntEnter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BntEnter.Location = new System.Drawing.Point(487, 76);
+            this.BntEnter.Margin = new System.Windows.Forms.Padding(2);
             this.BntEnter.Name = "BntEnter";
             this.BntEnter.Size = new System.Drawing.Size(112, 44);
             this.BntEnter.TabIndex = 1;
@@ -86,7 +86,7 @@ partial class LoginForm
             // 
             // bexit
             // 
-            this.bexit.Location = new System.Drawing.Point(409, 136);
+            this.bexit.Location = new System.Drawing.Point(487, 136);
             this.bexit.Margin = new System.Windows.Forms.Padding(2);
             this.bexit.Name = "bexit";
             this.bexit.Size = new System.Drawing.Size(112, 44);
@@ -95,10 +95,11 @@ partial class LoginForm
             this.bexit.UseVisualStyleBackColor = true;
             this.bexit.Click += new System.EventHandler(this.bexit_Click);
             // 
-            // LoginForm
+            // Authorization
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(675, 283);
             this.Controls.Add(this.bexit);
             this.Controls.Add(this.label2);
@@ -106,8 +107,8 @@ partial class LoginForm
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BntEnter);
             this.Controls.Add(this.txtUsername);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "LoginForm";
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "Authorization";
             this.Text = "Sign Up";
             this.ResumeLayout(false);
             this.PerformLayout();

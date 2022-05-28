@@ -7,21 +7,24 @@ using System.Threading.Tasks;
 
 namespace Chat
 {
-    public partial class Form1 : Form
+    public partial class Chat : Form
     {
-        private string _username; //CH
-        private string _userIP; //CH
-        private IPAddress Ip; //CH
-        private bool _alive = true;
+        private string _login;
+        private string _userIPaddress;
+
+        private IPAddress IPaddress;
+        private bool _exist = true;
+
         private const int UDPPort = 7500;
         private const int TCPPort = 7501;
-        private readonly IPAddress broadcastAddress = IPAddress.Broadcast;
 
-        private static Task receiveThreadUDP;
-        private static Task receiveThreadTCP;
+        private readonly IPAddress broadcastAd = IPAddress.Broadcast;
 
-        private readonly SetChat _setChat = new SetChat();
-        public Form1()
+        private static Task receiveUDPTh;
+        private static Task receiveTCPTh;
+
+        private readonly ChatMaintanance _chatMaintain = new ChatMaintanance();
+        public Chat()
         {
             InitializeComponent();
         }
@@ -29,46 +32,47 @@ namespace Chat
         private void Form1_Load(object sender, EventArgs e)
         {
             Hide();
-            using (LoginForm loginForm = new LoginForm())
+            using (Authorization AuthForm = new Authorization())
             {
-                loginForm.ShowDialog();
+                AuthForm.ShowDialog();
 
-                if (loginForm.UserName == "")
+                if (AuthForm.UserName == "")
                     Close();
                 else
                 {
-                    _username = loginForm.UserName;
-                    _userIP = loginForm.UserIP; 
+                    _login = AuthForm.UserName;
+                    _userIPaddress = AuthForm.UserIP; 
 
-                    string  MessageUsername = _username;
-                    string MessageIp = _userIP;
-                    if (IPAddress.TryParse(MessageIp, out var address)) //try to put address->messageIp
+                    string  MessageLogin = _login;
+                    string MessageAddress = _userIPaddress;
+
+                    if (IPAddress.TryParse(MessageAddress, out var adr)) //try to put address->messageIp
                     {
-                        Ip = address;
+                        IPaddress = adr;
                     }
 
-                    _alive = true;
-                    SendMessageUDP("0" + _username);
+                    _exist = true;
+                    UDPSend("0" + _login);
+
+                    receiveUDPTh = new Task(UDPReceive);
+                    receiveUDPTh.Start();
                     
-                    receiveThreadUDP = new Task(ReceiveMessageUDP);
-                    receiveThreadUDP.Start();
-                    
-                    txtChat.Text = $"{DateTime.Now.ToShortTimeString()} : {_username} [{Ip}] (you)  has just entered the chat\n" + txtChat.Text;
-                    receiveThreadTCP = new Task(ReceiveTCP);
-                    receiveThreadTCP.Start();
+                    tbChatWindow.Text = $"{DateTime.Now.ToShortTimeString()} |  {_login} (You) has just entered the chat\n" + tbChatWindow.Text;
+                    receiveTCPTh = new Task(ReceiveTCP);
+                    receiveTCPTh.Start();
                     Show();
                 }
             }
                 
         }
         
-        private void SendMessageUDP(string message) //Send broadcast message
+        private void UDPSend(string message) //Send broadcast message
         {
-            UdpClient sender = new UdpClient(new IPEndPoint(Ip, UDPPort));
+            UdpClient sender = new UdpClient(new IPEndPoint(IPaddress, UDPPort));
             try
             {
-                byte[] data = Encoding.UTF8.GetBytes(message);
-                sender.Send(data, data.Length, broadcastAddress.ToString(), UDPPort);
+                byte[] messagedata = Encoding.UTF8.GetBytes(message);
+                sender.Send(messagedata, messagedata.Length, broadcastAd.ToString(), UDPPort);
             }
             catch (Exception ex)
             {
@@ -80,25 +84,25 @@ namespace Chat
             }
         }
         
-        private void ReceiveMessageUDP()
+        private void UDPReceive()
         {
-            IPEndPoint remoteIp = new IPEndPoint(IPAddress.Any, UDPPort);
-            UdpClient receiver = new UdpClient(new IPEndPoint(Ip, UDPPort));
-            while (_alive)
+            IPEndPoint receiverIp = new IPEndPoint(IPAddress.Any, UDPPort);
+            UdpClient receiver = new UdpClient(new IPEndPoint(IPaddress, UDPPort));
+            while (_exist)
             {
-                byte[] data = receiver.Receive(ref remoteIp);
-                string message = Encoding.UTF8.GetString(data);
+                byte[] messagedata = receiver.Receive(ref receiverIp);
+                string message = Encoding.UTF8.GetString(messagedata);
 
-                string toPrint = _setChat.WhatIsThis(message); // check wherther it's first,last or ordinary message
+                string toPrint = _chatMaintain.NewChecker(message);
 
-                User newUser = new User(message.Substring(1), remoteIp); // get clear login and create user
+                User newUser = new User(message.Substring(1), receiverIp); // get clear login and create user
                 newUser.EstablishConnection();
-                _setChat.UserList.Add(newUser);
-                newUser.SendMessage("0" + _username);
+                _chatMaintain.UsersList.Add(newUser);
+                newUser.SendMessage("0" + _login);
                 this.Invoke(new MethodInvoker(() =>
                 {
                     string time = DateTime.Now.ToShortTimeString();
-                    txtChat.Text = $"{time} [{remoteIp.Address}] {toPrint}\n {txtChat.Text}";
+                    tbChatWindow.Text = $"{time} [{receiverIp.Address}] {toPrint}\n {tbChatWindow.Text}";
                 }));
                 Task.Factory.StartNew(() => ListenClient(newUser));
             }
@@ -109,7 +113,7 @@ namespace Chat
 
         private void SendMessageToAllClients(string tcpMessage)
         {
-            foreach (var user in _setChat.UserList)
+            foreach (var user in _chatMaintain.UsersList)
             {
               
                 try
@@ -126,14 +130,14 @@ namespace Chat
             {
                 this.Invoke(new MethodInvoker(() =>
                 {          
-                    txtChat.Text = $"{DateTime.Now.ToShortTimeString()} : {_username} [{Ip}] (you):  {tcpMessage.Substring(1)}\n" + txtChat.Text;
+                    tbChatWindow.Text = $"{DateTime.Now.ToShortTimeString()} | You: {tcpMessage.Substring(1)}\n" + tbChatWindow.Text;
                 }));
             }
         }
 
         private void ReceiveTCP()
         {
-            TcpListener tcpListener = new TcpListener(Ip, TCPPort);
+            TcpListener tcpListener = new TcpListener(IPaddress, TCPPort);
             tcpListener.Start();
 
             while (true)
@@ -147,7 +151,7 @@ namespace Chat
 
         private void ListenClient(User client)
         {
-            while (_alive)
+            while (_exist)
             {
                 string tcpMessage = client.ReceiveMessage();
                 switch (tcpMessage[0])
@@ -155,25 +159,25 @@ namespace Chat
                     case '0': //fist message
                     {
                         client.Name = tcpMessage.Substring(1);
-                        _setChat.UserList.Add(client);
+                        _chatMaintain.UsersList.Add(client);
                         break;
                     }
                     case '1': // last message
                         this.Invoke(new MethodInvoker(() =>
                         {
-                            txtChat.Text =
-                                $"{DateTime.Now.ToShortTimeString()} :  {client.Name} [{client.IP}] has left the chat\n" +
-                                txtChat.Text;
+                            tbChatWindow.Text =
+                                $"{DateTime.Now.ToShortTimeString()} | {client.Name} [{client.IP}] has left the chat\n" +
+                                tbChatWindow.Text;
                         }));
-                        _setChat.UserList.Remove(client);
+                        _chatMaintain.UsersList.Remove(client);
                         return;
 
                     case '2': // ordinary message
                         this.Invoke(new MethodInvoker(() =>
                         {
-                            txtChat.Text =
-                                $"{DateTime.Now.ToShortTimeString()} :  {client.Name} [{client.IP}]: {tcpMessage.Substring(1)}\n" +
-                                txtChat.Text;
+                            tbChatWindow.Text =
+                                $"{DateTime.Now.ToShortTimeString()} |  {client.Name} [{client.IP}]: {tcpMessage.Substring(1)}\n" +
+                                tbChatWindow.Text;
                         }));
                         break;
                 }
@@ -208,11 +212,11 @@ namespace Chat
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            _alive = false;
+            _exist = false;
             SendMessageToAllClients("1");
-            if (_setChat.UserList.Count != 0)
+            if (_chatMaintain.UsersList.Count != 0)
             {
-                foreach (var user in _setChat.UserList)
+                foreach (var user in _chatMaintain.UsersList)
                 {
                     user.Disconnect();
                 }
