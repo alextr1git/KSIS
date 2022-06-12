@@ -1,0 +1,15 @@
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\KSIS\LabWork4\bin\Debug\net6.0\Server-Proxy.exe
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\KSIS\LabWork4\bin\Debug\net6.0\Server-Proxy.deps.json
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\KSIS\LabWork4\bin\Debug\net6.0\Server-Proxy.runtimeconfig.json
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\KSIS\LabWork4\bin\Debug\net6.0\Server-Proxy.dll
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\KSIS\LabWork4\bin\Debug\net6.0\Server-Proxy.pdb
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\KSIS\LabWork4\obj\Debug\net6.0\Server-Proxy.csproj.AssemblyReference.cache
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\KSIS\LabWork4\obj\Debug\net6.0\Server-Proxy.GeneratedMSBuildEditorConfig.editorconfig
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\KSIS\LabWork4\obj\Debug\net6.0\Server-Proxy.AssemblyInfoInputs.cache
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\KSIS\LabWork4\obj\Debug\net6.0\Server-Proxy.AssemblyInfo.cs
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\KSIS\LabWork4\obj\Debug\net6.0\Server-Proxy.csproj.CoreCompileInputs.cache
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\KSIS\LabWork4\obj\Debug\net6.0\Server-Proxy.dll
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\KSIS\LabWork4\obj\Debug\net6.0\refint\Server-Proxy.dll
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\KSIS\LabWork4\obj\Debug\net6.0\Server-Proxy.pdb
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\KSIS\LabWork4\obj\Debug\net6.0\Server-Proxy.genruntimeconfig.cache
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\KSIS\LabWork4\obj\Debug\net6.0\ref\Server-Proxy.dll

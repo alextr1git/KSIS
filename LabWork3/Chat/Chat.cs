@@ -58,7 +58,7 @@ namespace Chat
                     receiveUDPTh.Start();
                     
                     tbChatWindow.Text = $"{DateTime.Now.ToShortTimeString()} |  {_login} (You) has just entered the chat\n" + tbChatWindow.Text;
-                    receiveTCPTh = new Task(ReceiveTCP);
+                    receiveTCPTh = new Task(TCPReceive);
                     receiveTCPTh.Start();
                     Show();
                 }
@@ -135,7 +135,7 @@ namespace Chat
             }
         }
 
-        private void ReceiveTCP()
+        private void TCPReceive()
         {
             TcpListener tcpListener = new TcpListener(IPaddress, TCPPort);
             tcpListener.Start();

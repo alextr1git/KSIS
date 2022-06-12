@@ -1,0 +1,45 @@
+D:\Загрузки\CSaN-KSiS_LabWorks-main\CSaN-KSiS_LabWorks-main\Proxy_4lab\bin\Debug\net6.0\Proxy_4lab.exe
+D:\Загрузки\CSaN-KSiS_LabWorks-main\CSaN-KSiS_LabWorks-main\Proxy_4lab\bin\Debug\net6.0\Proxy_4lab.deps.json
+D:\Загрузки\CSaN-KSiS_LabWorks-main\CSaN-KSiS_LabWorks-main\Proxy_4lab\bin\Debug\net6.0\Proxy_4lab.runtimeconfig.json
+D:\Загрузки\CSaN-KSiS_LabWorks-main\CSaN-KSiS_LabWorks-main\Proxy_4lab\bin\Debug\net6.0\Proxy_4lab.dll
+D:\Загрузки\CSaN-KSiS_LabWorks-main\CSaN-KSiS_LabWorks-main\Proxy_4lab\bin\Debug\net6.0\Proxy_4lab.pdb
+D:\Загрузки\CSaN-KSiS_LabWorks-main\CSaN-KSiS_LabWorks-main\Proxy_4lab\obj\Debug\net6.0\Proxy_4lab.csproj.AssemblyReference.cache
+D:\Загрузки\CSaN-KSiS_LabWorks-main\CSaN-KSiS_LabWorks-main\Proxy_4lab\obj\Debug\net6.0\Proxy_4lab.GeneratedMSBuildEditorConfig.editorconfig
+D:\Загрузки\CSaN-KSiS_LabWorks-main\CSaN-KSiS_LabWorks-main\Proxy_4lab\obj\Debug\net6.0\Proxy_4lab.AssemblyInfoInputs.cache
+D:\Загрузки\CSaN-KSiS_LabWorks-main\CSaN-KSiS_LabWorks-main\Proxy_4lab\obj\Debug\net6.0\Proxy_4lab.AssemblyInfo.cs
+D:\Загрузки\CSaN-KSiS_LabWorks-main\CSaN-KSiS_LabWorks-main\Proxy_4lab\obj\Debug\net6.0\Proxy_4lab.csproj.CoreCompileInputs.cache
+D:\Загрузки\CSaN-KSiS_LabWorks-main\CSaN-KSiS_LabWorks-main\Proxy_4lab\obj\Debug\net6.0\Proxy_4lab.dll
+D:\Загрузки\CSaN-KSiS_LabWorks-main\CSaN-KSiS_LabWorks-main\Proxy_4lab\obj\Debug\net6.0\refint\Proxy_4lab.dll
+D:\Загрузки\CSaN-KSiS_LabWorks-main\CSaN-KSiS_LabWorks-main\Proxy_4lab\obj\Debug\net6.0\Proxy_4lab.pdb
+D:\Загрузки\CSaN-KSiS_LabWorks-main\CSaN-KSiS_LabWorks-main\Proxy_4lab\obj\Debug\net6.0\Proxy_4lab.genruntimeconfig.cache
+D:\Загрузки\CSaN-KSiS_LabWorks-main\CSaN-KSiS_LabWorks-main\Proxy_4lab\obj\Debug\net6.0\ref\Proxy_4lab.dll
+C:\Users\User\Desktop\Proxy_4lab\bin\Debug\net6.0\Proxy_4lab.exe
+C:\Users\User\Desktop\Proxy_4lab\bin\Debug\net6.0\Proxy_4lab.deps.json
+C:\Users\User\Desktop\Proxy_4lab\bin\Debug\net6.0\Proxy_4lab.runtimeconfig.json
+C:\Users\User\Desktop\Proxy_4lab\bin\Debug\net6.0\Proxy_4lab.dll
+C:\Users\User\Desktop\Proxy_4lab\bin\Debug\net6.0\Proxy_4lab.pdb
+C:\Users\User\Desktop\Proxy_4lab\obj\Debug\net6.0\Proxy_4lab.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\Proxy_4lab\obj\Debug\net6.0\Proxy_4lab.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\Proxy_4lab\obj\Debug\net6.0\Proxy_4lab.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\Proxy_4lab\obj\Debug\net6.0\Proxy_4lab.AssemblyInfo.cs
+C:\Users\User\Desktop\Proxy_4lab\obj\Debug\net6.0\Proxy_4lab.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Proxy_4lab\obj\Debug\net6.0\Proxy_4lab.dll
+C:\Users\User\Desktop\Proxy_4lab\obj\Debug\net6.0\refint\Proxy_4lab.dll
+C:\Users\User\Desktop\Proxy_4lab\obj\Debug\net6.0\Proxy_4lab.pdb
+C:\Users\User\Desktop\Proxy_4lab\obj\Debug\net6.0\Proxy_4lab.genruntimeconfig.cache
+C:\Users\User\Desktop\Proxy_4lab\obj\Debug\net6.0\ref\Proxy_4lab.dll
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\KSIS\LabWork4\bin\Debug\net6.0\Proxy_4lab.exe
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\KSIS\LabWork4\bin\Debug\net6.0\Proxy_4lab.deps.json
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\KSIS\LabWork4\bin\Debug\net6.0\Proxy_4lab.runtimeconfig.json
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\KSIS\LabWork4\bin\Debug\net6.0\Proxy_4lab.dll
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\KSIS\LabWork4\bin\Debug\net6.0\Proxy_4lab.pdb
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\KSIS\LabWork4\obj\Debug\net6.0\Proxy_4lab.csproj.AssemblyReference.cache
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\KSIS\LabWork4\obj\Debug\net6.0\Proxy_4lab.GeneratedMSBuildEditorConfig.editorconfig
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\KSIS\LabWork4\obj\Debug\net6.0\Proxy_4lab.AssemblyInfoInputs.cache
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\KSIS\LabWork4\obj\Debug\net6.0\Proxy_4lab.AssemblyInfo.cs
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\KSIS\LabWork4\obj\Debug\net6.0\Proxy_4lab.csproj.CoreCompileInputs.cache
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\KSIS\LabWork4\obj\Debug\net6.0\Proxy_4lab.dll
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\KSIS\LabWork4\obj\Debug\net6.0\refint\Proxy_4lab.dll
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\KSIS\LabWork4\obj\Debug\net6.0\Proxy_4lab.pdb
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\KSIS\LabWork4\obj\Debug\net6.0\Proxy_4lab.genruntimeconfig.cache
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\KSIS\LabWork4\obj\Debug\net6.0\ref\Proxy_4lab.dll

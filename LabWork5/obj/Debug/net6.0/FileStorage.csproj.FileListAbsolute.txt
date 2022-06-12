@@ -1,0 +1,16 @@
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\KSIS\LabWork5\CSaN-KSiS_LabWorks-main\5_FileStorage\bin\Debug\net6.0\FileStorage.exe
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\KSIS\LabWork5\CSaN-KSiS_LabWorks-main\5_FileStorage\bin\Debug\net6.0\FileStorage.dll.config
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\KSIS\LabWork5\CSaN-KSiS_LabWorks-main\5_FileStorage\bin\Debug\net6.0\FileStorage.deps.json
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\KSIS\LabWork5\CSaN-KSiS_LabWorks-main\5_FileStorage\bin\Debug\net6.0\FileStorage.runtimeconfig.json
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\KSIS\LabWork5\CSaN-KSiS_LabWorks-main\5_FileStorage\bin\Debug\net6.0\FileStorage.dll
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\KSIS\LabWork5\CSaN-KSiS_LabWorks-main\5_FileStorage\bin\Debug\net6.0\FileStorage.pdb
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\KSIS\LabWork5\CSaN-KSiS_LabWorks-main\5_FileStorage\obj\Debug\net6.0\FileStorage.csproj.AssemblyReference.cache
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\KSIS\LabWork5\CSaN-KSiS_LabWorks-main\5_FileStorage\obj\Debug\net6.0\FileStorage.GeneratedMSBuildEditorConfig.editorconfig
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\KSIS\LabWork5\CSaN-KSiS_LabWorks-main\5_FileStorage\obj\Debug\net6.0\FileStorage.AssemblyInfoInputs.cache
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\KSIS\LabWork5\CSaN-KSiS_LabWorks-main\5_FileStorage\obj\Debug\net6.0\FileStorage.AssemblyInfo.cs
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\KSIS\LabWork5\CSaN-KSiS_LabWorks-main\5_FileStorage\obj\Debug\net6.0\FileStorage.csproj.CoreCompileInputs.cache
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\KSIS\LabWork5\CSaN-KSiS_LabWorks-main\5_FileStorage\obj\Debug\net6.0\FileStorage.dll
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\KSIS\LabWork5\CSaN-KSiS_LabWorks-main\5_FileStorage\obj\Debug\net6.0\refint\FileStorage.dll
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\KSIS\LabWork5\CSaN-KSiS_LabWorks-main\5_FileStorage\obj\Debug\net6.0\FileStorage.pdb
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\KSIS\LabWork5\CSaN-KSiS_LabWorks-main\5_FileStorage\obj\Debug\net6.0\FileStorage.genruntimeconfig.cache
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\КСИС\KSIS\LabWork5\CSaN-KSiS_LabWorks-main\5_FileStorage\obj\Debug\net6.0\ref\FileStorage.dll
